@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xuyang Wang | Lehigh University</title>
+  <meta name="description" content="Xuyang Wang (王旭阳) — M.S. in Data Science at Lehigh University. Research interests: autonomous AI research, LLM-based agents, recursive self-improvement.">
+  <meta name="author" content="Xuyang Wang">
+
+  <!-- Apply saved / system theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t === "dark" || (!t && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("theme-dark");
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239a5b3c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3EXW%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="scroll-progress"></div>
+
+  <!-- ============ Top bar ============ -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Xuyang Wang</a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </nav>
+      <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-regular fa-moon"></i><i class="fa-regular fa-sun"></i>
+      </button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="wrapper" id="top">
+
+    <!-- ============ Profile card ============ -->
+    <header class="profile rv">
+      <!-- TODO: put your photo at assets/img/avatar.jpg and swap the placeholder for:
+           <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of Xuyang Wang"> -->
+      <div class="avatar avatar-placeholder" role="img" aria-label="Xuyang Wang">XW</div>
+      <h1 class="name">Xuyang Wang<span class="cn">王旭阳</span></h1>
+      <p class="role">M.S. Student in Data Science</p>
+      <p class="org">Lehigh University</p>
+      <p class="email">alexscofield1023 (at) gmail.com</p>
+      <div class="social-icons">
+        <a href="mailto:alexscofield1023@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <!-- TODO: CV link, add back with a PDF that has no phone number
+        <a href="assets/files/Xuyang_Wang_CV.pdf" title="CV" aria-label="CV" class="cv-icon" target="_blank" rel="noopener">CV</a>
+        -->
+        <!-- TODO: fill in your own links, then uncomment
+        <a href="https://scholar.google.com/citations?user=XXXX" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://github.com/XXXX" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/XXXX" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        -->
+      </div>
+    </header>
+
+    <!-- ============ About Me ============ -->
+    <section id="about">
+      <h2 class="rv">About Me</h2>
+      <p class="rv">
+        Hi there! I'm <strong>Xuyang Wang</strong> 👋 I am a master's student in Data Science at
+        <a href="https://www.lehigh.edu/" target="_blank" rel="noopener">Lehigh University</a>, with a background in
+        machine learning and data analytics. Before Lehigh, I received my B.Eng. in Data Science and Big Data Technology
+        from <a href="https://www.lzjtu.edu.cn/" target="_blank" rel="noopener">Lanzhou Jiaotong University</a>.
+      </p>
+      <p class="rv">
+        My work spans the full data lifecycle: building data pipelines, running statistical analysis, training and
+        evaluating machine-learning models, and turning results into dashboards and reports that support decisions.
+        I have applied these skills across three internships in audit analytics, quantitative research and consulting.
+      </p>
+      <p class="rv open-to">
+        <i class="fa-solid fa-briefcase"></i>
+        Graduating in <strong>December 2026</strong> and open to
+        <strong>Data Scientist</strong>, <strong>Machine Learning Engineer</strong>, <strong>Data Analyst</strong> and
+        <strong>Business Analyst</strong> opportunities.
+      </p>
+
+      <div class="edu-grid">
+        <div class="card edu-card rv">
+          <div class="edu-head">
+            <!-- TODO: school logo → <div class="logo"><img src="assets/img/lehigh.png" alt=""></div> -->
+            <div class="logo logo-text">LU</div>
+            <div>
+              <div class="edu-degree">M.S. in Data Science</div>
+              <div class="edu-school"><a href="https://www.lehigh.edu/" target="_blank" rel="noopener">Lehigh University</a></div>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span><i class="fa-regular fa-calendar"></i>Jun 2025 – Dec 2026 (expected)</span>
+            <span><i class="fa-solid fa-location-dot"></i>Bethlehem, PA, USA</span>
+            <span class="course"><i class="fa-solid fa-book-open"></i>Accelerated Computing for ML · Deep &amp; Generative Learning · Data Mining · Statistical &amp; Machine Learning · Statistical Modeling · Algorithms &amp; Software Foundations · Vibe Research for Scientific Discovery</span>
+          </div>
+        </div>
+
+        <div class="card edu-card rv">
+          <div class="edu-head">
+            <div class="logo logo-text">LZJTU</div>
+            <div>
+              <div class="edu-degree">B.Eng. in Data Science and Big Data Technology</div>
+              <div class="edu-school"><a href="https://www.lzjtu.edu.cn/" target="_blank" rel="noopener">Lanzhou Jiaotong University</a></div>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span><i class="fa-regular fa-calendar"></i>Sep 2021 – Jun 2025</span>
+            <span><i class="fa-solid fa-location-dot"></i>Lanzhou, China</span>
+            <span class="course"><i class="fa-solid fa-book-open"></i>Data Structures &amp; Algorithms · Database Systems · Python Programming · Object-Oriented Programming · Rapid Data Analysis · Data Visualization · Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="rv">Feel free to <a href="mailto:alexscofield1023@gmail.com">reach out</a> if you're interested in my work or would like to discuss potential collaborations!</p>
+    </section>
+
+    <!-- ============ Research Interests ============ -->
+    <section id="research">
+      <h2 class="rv">Research Interests</h2>
+      <p class="rv">I am interested in building AI systems that can <strong>do research</strong> and <strong>improve themselves</strong>, reliably.</p>
+      <p class="typing-line rv">Currently exploring <span class="typed" data-words="autonomous AI research|LLM-based agents|recursive self-improvement|verifier-guided agents">autonomous AI research</span></p>
+
+      <div class="card interest rv">
+        <div class="interest-num">01</div>
+        <div>
+          <h3>Autonomous AI Research</h3>
+          <p>Adaptive research agents that replicate scientific papers end to end, from reading to running experiments.</p>
+          <div class="tags"><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="card interest rv">
+        <div class="interest-num">02</div>
+        <div>
+          <h3>LLM-based Agents</h3>
+          <p>Skill orchestration, evidence-gated validation, persistent memory and checkpoint/resume for agents you can trust.</p>
+          <div class="tags"><a class="tag" href="#proj-olist">Olist BI Agent <small>Ongoing</small></a></div>
+        </div>
+      </div>
+
+      <div class="card interest rv">
+        <div class="interest-num">03</div>
+        <div>
+          <h3>Recursive Self-Improvement</h3>
+          <p>Verifier-guided loops where agents check their own outputs and get better over successive iterations.</p>
+          <div class="tags"><span class="tag">Coming soon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ News ============ -->
+    <!-- Add newest items at the top. Items with class="extra" stay hidden until "Show more". -->
+    <section id="news">
+      <h2 class="rv">News</h2>
+      <ul class="news-list rv">
+        <li><span class="news-date">Aug 2026</span> Wrapped up my summer internship as an <strong>IT Audit Intern</strong> at Pan-China Certified Public Accountants in Hangzhou.</li>
+        <li><span class="news-date">Feb 2026</span> Started the <a href="#proj-diffusion">Diffusion-Based Image Stylization System</a> project at Lehigh.</li>
+        <li><span class="news-date">Jun 2025</span> Started my M.S. in Data Science at <strong>Lehigh University</strong>! 🎉</li>
+        <li class="extra"><span class="news-date">Jun 2025</span> Graduated from Lanzhou Jiaotong University with a B.Eng. in Data Science and Big Data Technology.</li>
+        <li class="extra"><span class="news-date">Jan 2024</span> Joined <strong>QY (Qianyuan) Capital</strong> in Shenzhen as a Quantitative Research Intern.</li>
+        <li class="extra"><span class="news-date">Jul 2023</span> Joined <strong>Capgemini Consulting</strong> in Shanghai as a Consulting Assistant Intern (Data).</li>
+      </ul>
+      <button class="text-btn" id="news-toggle">Show more <i class="fa-solid fa-chevron-down"></i></button>
+    </section>
+
+    <!-- ============ Projects ============ -->
+    <section id="projects">
+      <h2 class="rv">Projects</h2>
+      <div class="chip-row rv">
+        <a class="chip" href="#y2026">2026</a>
+        <a class="chip" href="#y2025">2025</a>
+        <a class="chip" href="#y2024">2024</a>
+        <a class="chip" href="#y2023">2023</a>
+      </div>
+
+      <div class="year-label" id="y2026">2026</div>
+
+      <!-- Project template: copy one <article> block. To add an image, replace the <i class="thumb-icon"> with
+           <img src="assets/img/xxx.png" alt="">. Links in .btn-row: remove "disabled" once the URL is real. -->
+      <article class="card project rv" id="proj-olist">
+        <div class="project-thumb">
+          <span class="badge ongoing">Ongoing</span>
+          <i class="fa-solid fa-robot thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Olist Business Intelligence Agent</h3>
+          <div class="project-meta">LLM Agent · Natural-language analytics over Olist e-commerce data</div>
+          <ul>
+            <li><strong>Agent architecture &amp; skill orchestration:</strong> Designed and built a natural-language analytics agent that turns business questions into validated insights, orchestrating nine skills for planning, schema discovery, guarded SQL generation, validation, visualization and synthesis, and delivering interactive Streamlit/Plotly reports over the Olist e-commerce dataset.</li>
+            <li><strong>Evidence-gated validation:</strong> Encoded 31 source-data rules and policies together with query-level reconciliation and coverage checks; implemented a Candidate–Validate–Commit workflow that blocks any result with failed or missing required evidence, so unverified numbers never reach the final report.</li>
+            <li><strong>Persistent conversation memory:</strong> Combined SQLite conversation history with retrieval of previously validated analyses and query-filter inheritance; in a live API test the agent retained region and order-status filters across eight preseeded intervening turns.</li>
+            <li><strong>Fault tolerance &amp; cost control:</strong> Implemented journaling and checkpointing for long-running analyses; on a 10,000-order sample, independently reconciled order and GMV totals against the CSV source and verified that resuming five committed tasks required no new API calls.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">LLM Agents</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Data Validation</span><span class="tag">Business Intelligence</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+            <a class="btn disabled" href="#"><i class="fa-solid fa-display"></i> Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project rv" id="proj-diffusion">
+        <div class="project-thumb">
+          <span class="badge">Lehigh</span>
+          <i class="fa-solid fa-palette thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Diffusion-Based Image Stylization System</h3>
+          <div class="project-meta">Lehigh University · Feb 2026 – May 2026 · Co-Developer</div>
+          <ul>
+            <li>Co-developed an image stylization system on Stable Diffusion img2img with PyTorch and Hugging Face Diffusers, covering the full workflow from image upload and text prompting to generation-strength control.</li>
+            <li>Designed a quantitative evaluation comparing diffusion outputs against a CNN-based style-transfer baseline, using SSIM for structural similarity and CLIP Score for semantic alignment to measure the trade-off between content preservation and style strength.</li>
+            <li>Built Gradio and Streamlit front ends that expose model parameters to non-technical users and present inputs, generated outputs and parameter trade-offs side by side.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">PyTorch</span><span class="tag">Hugging Face Diffusers</span><span class="tag">Stable Diffusion</span><span class="tag">Generative AI</span><span class="tag">CLIP</span><span class="tag">SSIM</span><span class="tag">Gradio</span><span class="tag">Streamlit</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+            <a class="btn disabled" href="#"><i class="fa-regular fa-file-pdf"></i> Report</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project rv" id="proj-aqi">
+        <div class="project-thumb">
+          <span class="badge">Lehigh</span>
+          <i class="fa-solid fa-wind thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Global Air Quality Analysis and AQI Classification Prediction</h3>
+          <div class="project-meta">Lehigh University · Feb 2026 – May 2026 · Co-Developer</div>
+          <ul>
+            <li>Built an end-to-end Python data pipeline for a global air-quality dataset, covering missing-value treatment, deduplication, AQI category labeling and pollutant feature preparation.</li>
+            <li>Performed exploratory data analysis and statistical testing on AQI distributions, country-level differences and relationships between pollutants to identify the main drivers of air quality.</li>
+            <li>Trained a Random Forest classifier to predict AQI categories and deployed it in an interactive Streamlit dashboard for prediction and result exploration.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">Random Forest</span><span class="tag">EDA</span><span class="tag">Statistical Testing</span><span class="tag">Streamlit</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="year-label" id="y2025">2025</div>
+
+      <article class="card project rv" id="proj-climate">
+        <div class="project-thumb">
+          <span class="badge">Lehigh</span>
+          <i class="fa-solid fa-temperature-half thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Comparative Statistical Analysis of Climate Differences Across Global Capitals</h3>
+          <div class="project-meta">Lehigh University · Sep 2025 – Dec 2025</div>
+          <ul>
+            <li>Led project planning and coordinated the integration of team analyses for a cross-continental study of global-capital weather data covering June 2024 through May 2025.</li>
+            <li>Engineered city-month analytical records for six core weather indicators and delivered trend, boxplot and correlation visualizations to communicate regional patterns.</li>
+            <li>Applied one-way ANOVA, Kruskal-Wallis, Welch pairwise comparisons and Levene/Shapiro assumption checks; found a correlation of r = −0.64 between temperature and pressure and showed that continental grouping explains <strong>26.6%</strong> of temperature variation.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Python</span><span class="tag">Hypothesis Testing</span><span class="tag">ANOVA</span><span class="tag">Kruskal-Wallis</span><span class="tag">Data Visualization</span><span class="tag">Project Leadership</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project rv" id="proj-btc">
+        <div class="project-thumb">
+          <span class="badge">LZJTU</span>
+          <i class="fa-brands fa-bitcoin thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Bitcoin Price Analysis and Prediction Based on LSTM</h3>
+          <div class="project-meta">Lanzhou Jiaotong University · Feb 2025 – Jun 2025 · Independent Researcher</div>
+          <ul>
+            <li>Built a Python data workflow for 3,413 daily BTC-USD records using forward filling, MinMax scaling and 60-day input sequences for time-series forecasting.</li>
+            <li>Engineered return, rolling-volatility and volume features; segmented the market into four states using PCA and K-Means clustering.</li>
+            <li>Detected anomalous price and volume behavior with three complementary methods: Z-score, IQR and Isolation Forest.</li>
+            <li>Tuned a Keras LSTM with Keras Tuner, reducing test RMSE by <strong>28.5%</strong> (from 1,904.98 to 1,361.78).</li>
+            <li>Integrated forecasts, anomaly flags and market states into an interactive Plotly prototype with rule-based risk alerts to support market monitoring.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Python</span><span class="tag">TensorFlow/Keras</span><span class="tag">LSTM</span><span class="tag">Keras Tuner</span><span class="tag">Time Series</span><span class="tag">PCA</span><span class="tag">K-Means</span><span class="tag">Isolation Forest</span><span class="tag">Plotly</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="year-label" id="y2024">2024</div>
+
+      <article class="card project rv" id="proj-traffic">
+        <div class="project-thumb">
+          <span class="badge">LZJTU</span>
+          <i class="fa-solid fa-road thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Intelligent Real-Time Traffic Monitoring and Analysis System for Road Checkpoints</h3>
+          <div class="project-meta">Lanzhou Jiaotong University · Sep 2024 – Oct 2024</div>
+          <ul>
+            <li>Developed analytics modules for vehicle trajectory analysis, collision analysis, congestion detection and regional traffic-flow statistics on road-checkpoint data.</li>
+            <li>Implemented real-time congestion monitoring with Spark Streaming using a 5-minute window and a 5-second sliding interval.</li>
+            <li>Computed the Top 3 road traffic flows by region and conversion rates for 5 designated checkpoints to support traffic management decisions.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Spark</span><span class="tag">Spark Streaming</span><span class="tag">Real-Time Analytics</span><span class="tag">Big Data</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project rv" id="proj-rail">
+        <div class="project-thumb">
+          <span class="badge">LZJTU</span>
+          <i class="fa-solid fa-train thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Intelligent Evaluation System for High-Speed Rail Train Control Equipment</h3>
+          <div class="project-meta">Lanzhou Jiaotong University · Jun 2024 – Jul 2024</div>
+          <ul>
+            <li>Contributed to a big-data platform that analyzes train alarm and operations data and produces offline and real-time reports to improve railway operating efficiency and safety.</li>
+            <li>Built parts of the train master-data collection and transmission pipeline: a Java service receives data from ZeroMQ, parses Protobuf messages and delivers them to Kafka, processing 32,057 messages for downstream analytics.</li>
+            <li>Set up and configured Hadoop, Zookeeper, Flume, Kafka and Spark components; used Flume to land Kafka data in HDFS for durable storage.</li>
+            <li>Cleaned and transformed offline data with Spark Core, produced report aggregations with Spark SQL and stored the results in MySQL.</li>
+            <li>Wrote Python scripts to read report data from MySQL and visualize it with ECharts.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Java</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Spark SQL</span><span class="tag">Hadoop/HDFS</span><span class="tag">Flume</span><span class="tag">ZeroMQ</span><span class="tag">Protobuf</span><span class="tag">MySQL</span><span class="tag">ECharts</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="year-label" id="y2023">2023</div>
+
+      <article class="card project rv" id="proj-recsys">
+        <div class="project-thumb">
+          <span class="badge">LZJTU</span>
+          <i class="fa-solid fa-star-half-stroke thumb-icon"></i>
+        </div>
+        <div>
+          <h3>Machine Learning in Recommender Systems</h3>
+          <div class="project-meta">Lanzhou Jiaotong University · Jan 2023 – Apr 2023 · Independent Researcher</div>
+          <ul>
+            <li>Preprocessed Amazon Sports &amp; Outdoors ratings into user-item interactions, retaining users with at least five ratings to reduce sparsity.</li>
+            <li>Trained a 100-factor SVD collaborative-filtering model with Surprise and applied PCA to reduce the user-item latent representations.</li>
+            <li>Generated Top-5 personalized recommendations from similarity scores in the reduced feature space.</li>
+            <li>Evaluated alternative SVD/PCA configurations using RMSE on held-out test data.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">Python</span><span class="tag">scikit-surprise</span><span class="tag">SVD</span><span class="tag">Collaborative Filtering</span><span class="tag">PCA</span><span class="tag">Recommender Systems</span></div>
+          <div class="btn-row">
+            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section id="experience">
+      <h2 class="rv">Experience</h2>
+      <div class="timeline">
+        <div class="card exp rv">
+          <div class="exp-body">
+            <div class="exp-role">IT Audit Intern</div>
+            <div class="exp-org">Pan-China Certified Public Accountants LLP <span class="nowrap">（天健会计师事务所）</span></div>
+            <div class="exp-meta">
+              <span class="pill"><i class="fa-solid fa-location-dot"></i>Hangzhou, China</span>
+              <span class="pill"><i class="fa-regular fa-calendar"></i>Jul – Aug 2026</span>
+            </div>
+            <ul>
+              <li>Reconciled e-commerce order and logistics data across systems to identify discrepancies between order-management-system (OMS) records and shipment records.</li>
+              <li>Analyzed order exceptions, classified their causes and flagged transactions that required client clarification or audit follow-up.</li>
+              <li>Cleaned audit data, updated analysis scripts and performed sample testing across three e-commerce platforms.</li>
+            </ul>
+            <div class="tags stack"><span class="tag">Data Reconciliation</span><span class="tag">Data Cleaning</span><span class="tag">Exception Analysis</span><span class="tag">Audit Analytics</span></div>
+          </div>
+          <div class="logo logo-text">PCCPA</div>
+        </div>
+
+        <div class="card exp rv">
+          <div class="exp-body">
+            <div class="exp-role">Quantitative Research Intern</div>
+            <div class="exp-org">QY (Qianyuan) Capital Co., Ltd. <span class="nowrap">（乾元资始）</span></div>
+            <div class="exp-meta">
+              <span class="pill"><i class="fa-solid fa-location-dot"></i>Shenzhen, China</span>
+              <span class="pill"><i class="fa-regular fa-calendar"></i>Jan – Mar 2024</span>
+            </div>
+            <ul>
+              <li>Processed 12 months of financial data for factor screening and evaluated 15 candidate factors, selecting 5 for strategy review.</li>
+              <li>Applied a genetic algorithm over 3 iterations to prioritize factor combinations and streamline the screening analysis.</li>
+              <li>Conducted factor-attribution analysis to quantify return and risk drivers, supporting portfolio-optimization and risk-control discussions with the research team.</li>
+            </ul>
+            <div class="tags stack"><span class="tag">Factor Analysis</span><span class="tag">Financial Data Mining</span><span class="tag">Genetic Algorithm</span><span class="tag">Attribution Analysis</span></div>
+          </div>
+          <div class="logo logo-text">QY</div>
+        </div>
+
+        <div class="card exp rv">
+          <div class="exp-body">
+            <div class="exp-role">Consulting Assistant Intern (Data)</div>
+            <div class="exp-org">Capgemini Consulting (China) Co., Ltd. <span class="nowrap">（凯捷咨询）</span></div>
+            <div class="exp-meta">
+              <span class="pill"><i class="fa-solid fa-location-dot"></i>Shanghai, China</span>
+              <span class="pill"><i class="fa-regular fa-calendar"></i>Jul – Aug 2023</span>
+            </div>
+            <ul>
+              <li>Worked in the data group of a public-opinion (sentiment) monitoring project for new-energy vehicles; collected 40% of the review dataset across 12 websites, adapting Python crawlers to 7 page-structure types.</li>
+              <li>Integrated and refactored the team's crawler code, fixing errors and improving code structure ahead of packaging.</li>
+              <li>Maintained MongoDB collections and 2 data-transfer interfaces, supporting the pipeline from ingestion and storage to NLP-ready data.</li>
+              <li>Encoded three-class sentiment labels and aligned data schemas with the algorithm team for downstream model training.</li>
+              <li>Assisted the algorithm and solution teams with data analysis and Power BI visualization, and reported project progress to the mentor and other workstreams.</li>
+            </ul>
+            <div class="tags stack"><span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">ETL</span><span class="tag">NLP Data Preparation</span><span class="tag">Power BI</span></div>
+          </div>
+          <div class="logo logo-text">CG</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section id="skills">
+      <h2 class="rv">Technical Skills</h2>
+      <div class="skill-grid">
+        <div class="card skill rv">
+          <h3><i class="fa-solid fa-code"></i>Languages</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">Java</span><span class="tag">C++</span></div>
+        </div>
+        <div class="card skill rv">
+          <h3><i class="fa-solid fa-brain"></i>Machine Learning</h3>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow/Keras</span><span class="tag">Keras Tuner</span><span class="tag">HF Diffusers</span><span class="tag">scikit-surprise</span><span class="tag">Statistical Testing</span></div>
+        </div>
+        <div class="card skill rv">
+          <h3><i class="fa-solid fa-database"></i>Data &amp; Big Data</h3>
+          <div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">ETL Pipelines</span><span class="tag">Hadoop</span><span class="tag">Spark</span><span class="tag">Hive</span><span class="tag">HBase</span><span class="tag">Kafka</span><span class="tag">Zookeeper</span></div>
+        </div>
+        <div class="card skill rv">
+          <h3><i class="fa-solid fa-chart-column"></i>Visualization &amp; Tools</h3>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">Gradio</span><span class="tag">SPSS Modeler</span><span class="tag">Git</span><span class="tag">Linux</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Honors (uncomment and add to nav when ready) ============
+    <section id="honors">
+      <h2 class="rv">Honors and Awards</h2>
+      <ul class="diamond-list rv">
+        <li><strong>Award name</strong>, Issuer, Month Year</li>
+      </ul>
+    </section>
+    -->
+
+  </div>
+
+  <footer>
+    <p>Powered by HTML, CSS and JavaScript. Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> for polishing this site.</p>
+    <p>© <span id="year">2026</span> · Xuyang Wang · Lehigh University · Last Edited: November 10, 2026</p>
+  </footer>
+
+  <button class="icon-btn back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

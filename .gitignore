@@ -1,0 +1,6 @@
+# Publish only the website; everything else in this folder stays private
+/*
+!/.gitignore
+!/index.html
+!/assets/
+/assets/files/*.pdf
