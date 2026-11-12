@@ -447,7 +447,7 @@ footer p { margin: 2px 0; }
 
 /* ==========================================================================
    Layout v2: profile card in a fixed left column on wide screens,
-   stacked and centered below 1121px
+   stacked and centered below 900px
    ========================================================================== */
 .wrapper, .topbar-inner { max-width: 1200px; padding-left: 24px; padding-right: 24px; }
 footer { max-width: none; margin: 28px 0 0; padding: 16px 0 40px; }
@@ -455,11 +455,11 @@ footer { max-width: none; margin: 28px 0 0; padding: 16px 0 40px; }
 .profile .email a:hover { color: var(--acc); text-decoration: none; }
 .avatar { box-shadow: 0 8px 22px -12px rgba(17, 24, 39, 0.35); }
 
-@media (min-width: 1121px) {
+@media (min-width: 900px) {
   .wrapper {
     display: grid;
     grid-template-columns: 264px minmax(0, 1fr);
-    column-gap: 56px;
+    column-gap: clamp(28px, 4vw, 56px);
     align-items: start;
   }
   .profile {
