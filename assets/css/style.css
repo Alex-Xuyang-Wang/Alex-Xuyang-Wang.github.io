@@ -308,7 +308,7 @@ a.tag:hover { text-decoration: none; filter: brightness(0.97); }
 .project { display: grid; grid-template-columns: 240px 1fr; gap: 22px; padding: 18px; margin-bottom: 16px; }
 .project-thumb {
   position: relative;
-  aspect-ratio: 32 / 23;
+  aspect-ratio: 16 / 10;
   border-radius: 12px; overflow: hidden;
   border: 1px solid var(--border);
   background: linear-gradient(135deg, var(--acc-soft), var(--card) 70%);
@@ -382,7 +382,7 @@ a.tag:hover { text-decoration: none; filter: brightness(0.97); }
 .exp .logo.wide img { padding: 8px; }
 
 /* ---------- skills ---------- */
-.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .skill { padding: 14px 16px; }
 .skill h3 { font-size: 0.98rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 .skill h3 i { color: var(--acc); }
@@ -443,4 +443,93 @@ footer p { margin: 2px 0; }
   .exp .logo { display: none; }
   .profile { margin-top: 24px; }
   h2 { font-size: 1.4rem; }
+}
+
+/* ==========================================================================
+   Layout v2: profile card in a fixed left column on wide screens,
+   stacked and centered below 1121px
+   ========================================================================== */
+.wrapper, .topbar-inner { max-width: 1200px; padding-left: 24px; padding-right: 24px; }
+footer { max-width: none; margin: 28px 0 0; padding: 16px 0 40px; }
+.profile .email a { color: inherit; }
+.profile .email a:hover { color: var(--acc); text-decoration: none; }
+.avatar { box-shadow: 0 8px 22px -12px rgba(17, 24, 39, 0.35); }
+
+@media (min-width: 1121px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 264px minmax(0, 1fr);
+    column-gap: 56px;
+    align-items: start;
+  }
+  .profile {
+    position: sticky; top: 96px;
+    max-width: none;
+    margin: 48px 0 0;
+    padding: 28px 14px 22px;
+  }
+  .avatar { width: 132px; height: 132px; }
+  .name { font-size: 1.6rem; margin-bottom: 16px; }
+  .profile .role { font-size: 1rem; }
+  .profile .org { font-size: 0.95rem; }
+  .profile .email { font-size: 0.76rem; }
+  .content { padding-top: 20px; }
+}
+@media (max-width: 760px) {
+  .wrapper, .topbar-inner { padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 620px) {
+  .skill-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- polish ---------- */
+body::after {
+  content: ""; position: fixed; left: 50%; top: -340px; z-index: -1;
+  width: 1200px; height: 620px; margin-left: -600px;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(154, 91, 60, 0.07), rgba(233, 226, 212, 0.28) 55%, transparent 100%);
+}
+html.theme-dark body::after { display: none; }
+
+h2 { letter-spacing: -0.01em; }
+h2::after { width: 40px; border-radius: 999px; }
+
+/* animated underline for text links */
+section p a, section li a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+section p a:hover, section li a:hover { background-size: 100% 1px; text-decoration: none; }
+
+/* cards lift slightly on hover */
+.card, .js .rv.rv-in.card { transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, opacity 0.6s ease; }
+.card:hover, .js .rv.rv-in.card:hover { transform: translateY(-3px); }
+.profile:hover { transform: none; }
+
+/* diamond bullets inside cards */
+.project ul, .exp ul { list-style: none; padding-left: 0; }
+.project li, .exp li { position: relative; padding-left: 1.25em; margin-bottom: 4px; }
+.project li::before, .exp li::before {
+  content: ""; position: absolute; left: 2px; top: 0.62em;
+  width: 6px; height: 6px; border-radius: 1.5px;
+  background: var(--acc);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2.5px var(--acc-soft);
+}
+
+/* project cards */
+.year-label {
+  border-top: 1px dashed var(--border);
+  padding-top: 6px; margin-top: 18px;
+}
+.project { grid-template-columns: 260px 1fr; }
+.project-thumb { align-self: start; box-shadow: 0 8px 22px -12px rgba(15, 23, 42, 0.35); background: var(--acc-soft); }
+.project-thumb img { display: block; transition: transform 0.3s ease; }
+.project:hover .project-thumb img { transform: scale(1.04); }
+.badge { border-radius: 999px; padding: 2px 10px; box-shadow: 0 6px 16px -6px rgba(17, 24, 39, 0.45); z-index: 1; }
+.photo-credit { font-size: 0.72rem; }
+@media (max-width: 760px) {
+  .project { grid-template-columns: 1fr; }
+  .project-thumb { max-width: 420px; }
 }
