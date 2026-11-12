@@ -138,9 +138,6 @@ html.theme-dark .theme-toggle .fa-moon { display: none; }
 .avatar {
   width: 120px; height: 120px;
   border-radius: 50%;
-  padding: 3px;
-  border: 1px solid var(--border);
-  background: var(--card);
   object-fit: cover;
   display: block; margin: 0 auto 14px;
 }
@@ -220,6 +217,7 @@ section p { margin: 0 0 12px; }
   display: grid; place-items: center; overflow: hidden;
 }
 .logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.logo:not(.logo-text) { background: #fff; }
 .logo-text {
   font-family: var(--font-head); font-weight: 700;
   font-size: 0.8rem; color: var(--acc);
@@ -310,14 +308,13 @@ a.tag:hover { text-decoration: none; filter: brightness(0.97); }
 .project { display: grid; grid-template-columns: 240px 1fr; gap: 22px; padding: 18px; margin-bottom: 16px; }
 .project-thumb {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 32 / 23;
   border-radius: 12px; overflow: hidden;
   border: 1px solid var(--border);
   background: linear-gradient(135deg, var(--acc-soft), var(--card) 70%);
   display: grid; place-items: center;
 }
 .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.project-thumb .thumb-icon { font-size: 2.6rem; color: var(--acc); opacity: 0.55; }
 .badge {
   position: absolute; top: 8px; left: 8px;
   padding: 1px 9px;
@@ -381,6 +378,8 @@ a.tag:hover { text-decoration: none; filter: brightness(0.97); }
 .pill i { color: var(--acc); font-size: 0.72rem; }
 .exp ul { margin: 0; padding-left: 18px; font-size: 0.92rem; }
 .exp .logo { width: 56px; height: 56px; }
+.exp .logo.wide { width: 104px; }
+.exp .logo.wide img { padding: 8px; }
 
 /* ---------- skills ---------- */
 .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }

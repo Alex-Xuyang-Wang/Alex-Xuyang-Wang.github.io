@@ -53,21 +53,16 @@
 
     <!-- ============ Profile card ============ -->
     <header class="profile rv">
-      <!-- TODO: put your photo at assets/img/avatar.jpg and swap the placeholder for:
-           <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of Xuyang Wang"> -->
-      <div class="avatar avatar-placeholder" role="img" aria-label="Xuyang Wang">XW</div>
+      <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of Xuyang Wang" width="120" height="120">
       <h1 class="name">Xuyang Wang<span class="cn">王旭阳</span></h1>
       <p class="role">M.S. Student in Data Science</p>
       <p class="org">Lehigh University</p>
       <p class="email">alexscofield1023 (at) gmail.com</p>
       <div class="social-icons">
         <a href="mailto:alexscofield1023@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <!-- TODO: CV link, add back with a PDF that has no phone number
         <a href="assets/files/Xuyang_Wang_CV.pdf" title="CV" aria-label="CV" class="cv-icon" target="_blank" rel="noopener">CV</a>
-        -->
         <!-- TODO: fill in your own links, then uncomment
         <a href="https://scholar.google.com/citations?user=XXXX" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-        <a href="https://github.com/XXXX" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/XXXX" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         -->
       </div>
@@ -97,8 +92,7 @@
       <div class="edu-grid">
         <div class="card edu-card rv">
           <div class="edu-head">
-            <!-- TODO: school logo → <div class="logo"><img src="assets/img/lehigh.png" alt=""></div> -->
-            <div class="logo logo-text">LU</div>
+            <div class="logo"><img src="assets/img/logos/lehigh.svg" alt="Lehigh University logo"></div>
             <div>
               <div class="edu-degree">M.S. in Data Science</div>
               <div class="edu-school"><a href="https://www.lehigh.edu/" target="_blank" rel="noopener">Lehigh University</a></div>
@@ -113,7 +107,7 @@
 
         <div class="card edu-card rv">
           <div class="edu-head">
-            <div class="logo logo-text">LZJTU</div>
+            <div class="logo"><img src="assets/img/logos/lzjtu.jpg" alt="Lanzhou Jiaotong University emblem"></div>
             <div>
               <div class="edu-degree">B.Eng. in Data Science and Big Data Technology</div>
               <div class="edu-school"><a href="https://www.lzjtu.edu.cn/" target="_blank" rel="noopener">Lanzhou Jiaotong University</a></div>
@@ -191,12 +185,11 @@
 
       <div class="year-label" id="y2026">2026</div>
 
-      <!-- Project template: copy one <article> block. To add an image, replace the <i class="thumb-icon"> with
-           <img src="assets/img/xxx.png" alt="">. Links in .btn-row: remove "disabled" once the URL is real. -->
+      <!-- Project template: copy one <article> block. Thumbnails live in assets/img/projects/. -->
       <article class="card project rv" id="proj-olist">
         <div class="project-thumb">
           <span class="badge ongoing">Ongoing</span>
-          <i class="fa-solid fa-robot thumb-icon"></i>
+          <img src="assets/img/projects/olist.svg" alt="Question, SQL query and validated chart" loading="lazy">
         </div>
         <div>
           <h3>Olist Business Intelligence Agent</h3>
@@ -208,17 +201,13 @@
             <li><strong>Fault tolerance &amp; cost control:</strong> Implemented journaling and checkpointing for long-running analyses; on a 10,000-order sample, independently reconciled order and GMV totals against the CSV source and verified that resuming five committed tasks required no new API calls.</li>
           </ul>
           <div class="tags stack"><span class="tag">LLM Agents</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Data Validation</span><span class="tag">Business Intelligence</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-            <a class="btn disabled" href="#"><i class="fa-solid fa-display"></i> Demo</a>
-          </div>
         </div>
       </article>
 
       <article class="card project rv" id="proj-diffusion">
         <div class="project-thumb">
           <span class="badge">Lehigh</span>
-          <i class="fa-solid fa-palette thumb-icon"></i>
+          <img src="assets/img/projects/diffusion.svg" alt="Noise turning into a stylized picture" loading="lazy">
         </div>
         <div>
           <h3>Diffusion-Based Image Stylization System</h3>
@@ -229,17 +218,13 @@
             <li>Built Gradio and Streamlit front ends that expose model parameters to non-technical users and present inputs, generated outputs and parameter trade-offs side by side.</li>
           </ul>
           <div class="tags stack"><span class="tag">PyTorch</span><span class="tag">Hugging Face Diffusers</span><span class="tag">Stable Diffusion</span><span class="tag">Generative AI</span><span class="tag">CLIP</span><span class="tag">SSIM</span><span class="tag">Gradio</span><span class="tag">Streamlit</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-            <a class="btn disabled" href="#"><i class="fa-regular fa-file-pdf"></i> Report</a>
-          </div>
         </div>
       </article>
 
       <article class="card project rv" id="proj-aqi">
         <div class="project-thumb">
           <span class="badge">Lehigh</span>
-          <i class="fa-solid fa-wind thumb-icon"></i>
+          <img src="assets/img/projects/aqi.svg" alt="Air quality gauge and pollutant bars" loading="lazy">
         </div>
         <div>
           <h3>Global Air Quality Analysis and AQI Classification Prediction</h3>
@@ -250,9 +235,6 @@
             <li>Trained a Random Forest classifier to predict AQI categories and deployed it in an interactive Streamlit dashboard for prediction and result exploration.</li>
           </ul>
           <div class="tags stack"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">Random Forest</span><span class="tag">EDA</span><span class="tag">Statistical Testing</span><span class="tag">Streamlit</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
 
@@ -261,7 +243,7 @@
       <article class="card project rv" id="proj-climate">
         <div class="project-thumb">
           <span class="badge">Lehigh</span>
-          <i class="fa-solid fa-temperature-half thumb-icon"></i>
+          <img src="assets/img/projects/climate.svg" alt="Boxplots of temperature by continent" loading="lazy">
         </div>
         <div>
           <h3>Comparative Statistical Analysis of Climate Differences Across Global Capitals</h3>
@@ -272,16 +254,13 @@
             <li>Applied one-way ANOVA, Kruskal-Wallis, Welch pairwise comparisons and Levene/Shapiro assumption checks; found a correlation of r = −0.64 between temperature and pressure and showed that continental grouping explains <strong>26.6%</strong> of temperature variation.</li>
           </ul>
           <div class="tags stack"><span class="tag">Python</span><span class="tag">Hypothesis Testing</span><span class="tag">ANOVA</span><span class="tag">Kruskal-Wallis</span><span class="tag">Data Visualization</span><span class="tag">Project Leadership</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
 
       <article class="card project rv" id="proj-btc">
         <div class="project-thumb">
           <span class="badge">LZJTU</span>
-          <i class="fa-brands fa-bitcoin thumb-icon"></i>
+          <img src="assets/img/projects/bitcoin.svg" alt="Price line with forecast and anomalies" loading="lazy">
         </div>
         <div>
           <h3>Bitcoin Price Analysis and Prediction Based on LSTM</h3>
@@ -294,9 +273,6 @@
             <li>Integrated forecasts, anomaly flags and market states into an interactive Plotly prototype with rule-based risk alerts to support market monitoring.</li>
           </ul>
           <div class="tags stack"><span class="tag">Python</span><span class="tag">TensorFlow/Keras</span><span class="tag">LSTM</span><span class="tag">Keras Tuner</span><span class="tag">Time Series</span><span class="tag">PCA</span><span class="tag">K-Means</span><span class="tag">Isolation Forest</span><span class="tag">Plotly</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
 
@@ -305,7 +281,7 @@
       <article class="card project rv" id="proj-traffic">
         <div class="project-thumb">
           <span class="badge">LZJTU</span>
-          <i class="fa-solid fa-road thumb-icon"></i>
+          <img src="assets/img/projects/traffic.svg" alt="Road network with live traffic flow" loading="lazy">
         </div>
         <div>
           <h3>Intelligent Real-Time Traffic Monitoring and Analysis System for Road Checkpoints</h3>
@@ -316,16 +292,13 @@
             <li>Computed the Top 3 road traffic flows by region and conversion rates for 5 designated checkpoints to support traffic management decisions.</li>
           </ul>
           <div class="tags stack"><span class="tag">Spark</span><span class="tag">Spark Streaming</span><span class="tag">Real-Time Analytics</span><span class="tag">Big Data</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
 
       <article class="card project rv" id="proj-rail">
         <div class="project-thumb">
           <span class="badge">LZJTU</span>
-          <i class="fa-solid fa-train thumb-icon"></i>
+          <img src="assets/img/projects/rail.svg" alt="High-speed train and data pipeline" loading="lazy">
         </div>
         <div>
           <h3>Intelligent Evaluation System for High-Speed Rail Train Control Equipment</h3>
@@ -338,9 +311,6 @@
             <li>Wrote Python scripts to read report data from MySQL and visualize it with ECharts.</li>
           </ul>
           <div class="tags stack"><span class="tag">Java</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Spark SQL</span><span class="tag">Hadoop/HDFS</span><span class="tag">Flume</span><span class="tag">ZeroMQ</span><span class="tag">Protobuf</span><span class="tag">MySQL</span><span class="tag">ECharts</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
 
@@ -349,7 +319,7 @@
       <article class="card project rv" id="proj-recsys">
         <div class="project-thumb">
           <span class="badge">LZJTU</span>
-          <i class="fa-solid fa-star-half-stroke thumb-icon"></i>
+          <img src="assets/img/projects/recsys.svg" alt="User-item matrix and top-5 list" loading="lazy">
         </div>
         <div>
           <h3>Machine Learning in Recommender Systems</h3>
@@ -361,9 +331,6 @@
             <li>Evaluated alternative SVD/PCA configurations using RMSE on held-out test data.</li>
           </ul>
           <div class="tags stack"><span class="tag">Python</span><span class="tag">scikit-surprise</span><span class="tag">SVD</span><span class="tag">Collaborative Filtering</span><span class="tag">PCA</span><span class="tag">Recommender Systems</span></div>
-          <div class="btn-row">
-            <a class="btn disabled" href="#"><i class="fa-brands fa-github"></i> Code</a>
-          </div>
         </div>
       </article>
     </section>
@@ -387,7 +354,7 @@
             </ul>
             <div class="tags stack"><span class="tag">Data Reconciliation</span><span class="tag">Data Cleaning</span><span class="tag">Exception Analysis</span><span class="tag">Audit Analytics</span></div>
           </div>
-          <div class="logo logo-text">PCCPA</div>
+          <div class="logo"><img src="assets/img/logos/pccpa.png" alt="Pan-China CPA logo"></div>
         </div>
 
         <div class="card exp rv">
@@ -425,7 +392,7 @@
             </ul>
             <div class="tags stack"><span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">ETL</span><span class="tag">NLP Data Preparation</span><span class="tag">Power BI</span></div>
           </div>
-          <div class="logo logo-text">CG</div>
+          <div class="logo wide"><img src="assets/img/logos/capgemini.svg" alt="Capgemini logo"></div>
         </div>
       </div>
     </section>
@@ -466,7 +433,7 @@
 
   <footer>
     <p>Powered by HTML, CSS and JavaScript. Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> for polishing this site.</p>
-    <p>© <span id="year">2026</span> · Xuyang Wang · Lehigh University · Last Edited: November 10, 2026</p>
+    <p>© <span id="year">2026</span> · Xuyang Wang · Lehigh University · Last Edited: November 12, 2026</p>
   </footer>
 
   <button class="icon-btn back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
