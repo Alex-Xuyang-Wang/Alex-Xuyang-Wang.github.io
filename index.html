@@ -61,9 +61,9 @@
       <div class="social-icons">
         <a href="mailto:alexscofield1023@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="assets/files/Xuyang_Wang_CV.pdf" title="CV" aria-label="CV" class="cv-icon" target="_blank" rel="noopener">CV</a>
-        <!-- TODO: fill in your own links, then uncomment
+        <a href="https://www.linkedin.com/in/xuyang-wang-alex1023" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- TODO: fill in your own link, then uncomment
         <a href="https://scholar.google.com/citations?user=XXXX" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-        <a href="https://www.linkedin.com/in/XXXX" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         -->
       </div>
     </header>
@@ -136,8 +136,8 @@
         <div class="interest-num">01</div>
         <div>
           <h3>Autonomous AI Research</h3>
-          <p>Adaptive research agents that replicate scientific papers end to end, from reading to running experiments.</p>
-          <div class="tags"><span class="tag">Coming soon</span></div>
+          <p>Research agents that take a scientific question and public data, run their own analyses, and recover the findings of published papers, scored by an independent judge.</p>
+          <div class="tags"><a class="tag" href="#proj-alphacell">AlphaCell <small>Ongoing</small></a></div>
         </div>
       </div>
 
@@ -154,8 +154,8 @@
         <div class="interest-num">03</div>
         <div>
           <h3>Recursive Self-Improvement</h3>
-          <p>Verifier-guided loops where agents check their own outputs and get better over successive iterations.</p>
-          <div class="tags"><span class="tag">Coming soon</span></div>
+          <p>Improving an agent's tools, method rules and research strategies from evaluated experience, without changing model weights, and testing whether the gains are real and transfer to new problems.</p>
+          <div class="tags"><a class="tag" href="#proj-alphacell">AlphaCell <small>Ongoing</small></a></div>
         </div>
       </div>
     </section>
@@ -188,6 +188,26 @@
       <div class="year-label" id="y2026">2026</div>
 
       <!-- Project template: copy one <article> block. Thumbnails live in assets/img/projects/. -->
+      <article class="card project rv" id="proj-alphacell">
+        <div class="project-thumb">
+          <span class="badge ongoing">Ongoing</span>
+          <img src="assets/img/projects/alphacell.jpg" alt="Fluorescence microscopy image of HeLa cells" loading="lazy">
+        </div>
+        <div>
+          <h3>AlphaCell: Skill-Level Recursive Self-Improvement for Autonomous Research Agents</h3>
+          <div class="project-meta">Team research project · Autonomous AI research · Biomedical paper replication</div>
+          <ul>
+            <li><strong>Research question:</strong> Investigating whether an LLM research agent can improve its scientific performance from past research episodes and independent feedback <em>without updating model weights</em>. The base model is held fixed while an external, versioned research skill is updated; the skill has four parts: reusable tools, method and evidence rules, planning strategies, and an updater that revises the next skill version.</li>
+            <li><strong>Solver / Judge / Skill Development architecture:</strong> A Solver agent receives a scientific question and permitted public data, chooses its own analyses and submits candidate findings; an independent Judge holds private reference findings and scores matches on scientific meaning (subject, variables, direction of effect, conditions) rather than text similarity; a Skill Development stage proposes the next skill from execution traces and scores, which is validated and frozen before a fresh Solver session tests it.</li>
+            <li><strong>Paper-to-Benchmark pipeline:</strong> Converted published biomedical papers with public data into standardized Research Episodes, extracting questions, variables, treatment and control groups, units of analysis and independently testable conclusions. An OPEN Target filter admits only findings whose data, variables and comparisons can be reproduced, and public task materials are kept separate from private scoring materials to prevent answer leakage and evaluation contamination.</li>
+            <li><strong>Benchmark &amp; baseline:</strong> Built <strong>8 candidate episodes</strong> covering zebrafish liver and heart regeneration, hippocampal neurons, malaria infection, cancer, spatial liver analysis and influenza-associated lung aging, with 2 to 68 reference targets each. Defined Discovery Recall (matched targets / total targets) and recorded S0 baselines on all 8: non-zero recall on 3 episodes (<strong>58.82%</strong>, 10/17; 25.00%, 4/16; 5.88%, 4/68) and zero on the other 5. Versions are compared within an episode, not ranked across papers.</li>
+            <li><strong>Skill iteration &amp; controlled experiment:</strong> Developed and froze the first improved skill, S1, adding reusable tools, method rules, a question-driven planning strategy and a fixed update procedure; it passed all 8 synthetic validation tests. In an S0 vs S1 comparison on the influenza lung-aging episode, S1 analyzed young vs aged immune-cell differences across flow-cytometry, bulk, single-cell and spatial RNA-seq data using unpaired exact permutation tests with Benjamini–Hochberg correction. Submitted findings rose from 3 to 4, but Discovery Recall stayed at <strong>5.88% (4/68), a change of 0.00 points</strong>.</li>
+            <li><strong>Diagnosis &amp; rigor:</strong> Showed that changing an agent's workflow does not by itself raise the rate at which it recovers reference findings, and traced a likely cause to narrow coverage (all four S1 findings came from flow cytometry). Documented reproducibility limits (a retrospective development-set comparison, the original S0 skill not preserved, inputs not yet byte-verified, targets pending final audit) and limited the conclusion to what the data supports. Next: per-target error analysis, component ablations, repeated independent runs and cross-paper transfer tests.</li>
+          </ul>
+          <div class="tags stack"><span class="tag">LLM Agents</span><span class="tag">Recursive Self-Improvement</span><span class="tag">Benchmark Design</span><span class="tag">LLM-as-Judge Evaluation</span><span class="tag">Experimental Design</span><span class="tag">Permutation Testing</span><span class="tag">Multiple-Testing Correction</span><span class="tag">scRNA-seq</span><span class="tag">Spatial Transcriptomics</span><span class="tag">Flow Cytometry</span></div>
+        </div>
+      </article>
+
       <article class="card project rv" id="proj-olist">
         <div class="project-thumb">
           <span class="badge ongoing">Ongoing</span>
@@ -433,7 +453,7 @@
 
     <footer>
       <p>Powered by HTML, CSS and JavaScript. Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> for polishing this site.</p>
-      <p>© <span id="year">2026</span> · Xuyang Wang · Lehigh University · Last Edited: November 12, 2026</p>
+      <p>© <span id="year">2026</span> · Xuyang Wang · Lehigh University · Last Edited: November 17, 2026</p>
     </footer>
 
     </main>
