@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Xuyang Wang | Lehigh University</title>
-  <meta name="description" content="Xuyang Wang — M.S. in Data Science at Lehigh University. Research interests: autonomous AI research, LLM-based agents, recursive self-improvement.">
+  <meta name="description" content="Xuyang Wang — M.S. in Data Science at Lehigh University. Machine learning, statistical analysis, data engineering and LLM agents. Open to Data Scientist, Machine Learning Engineer, Data Analyst and Business Analyst roles.">
   <meta name="author" content="Xuyang Wang">
 
   <!-- Apply saved / system theme before paint to avoid a flash -->
@@ -123,21 +123,21 @@
         </div>
       </div>
 
-      <p class="rv">Feel free to <a href="mailto:alexscofield1023@gmail.com">reach out</a> if you're interested in my work or would like to discuss potential collaborations!</p>
+      <p class="rv">Feel free to <a href="mailto:alexscofield1023@gmail.com">reach out</a> if you're interested in my work, have a role that might be a good fit, or would like to collaborate!</p>
     </section>
 
     <!-- ============ Research Interests ============ -->
     <section id="research">
       <h2 class="rv">Research Interests</h2>
       <p class="rv">I like turning messy, real-world data into <strong>reliable, evidence-backed decisions</strong>, combining statistics, machine learning and data engineering, and increasingly LLM-powered tools.</p>
-      <p class="typing-line rv">Currently exploring <span class="typed" data-words="predictive modeling|statistical inference|data pipelines|business analytics|LLM-powered analytics|autonomous research agents">predictive modeling</span></p>
+      <p class="typing-line rv">Currently exploring <span class="typed" data-words="predictive modeling|time-series forecasting|statistical inference|data pipelines|business analytics|LLM-powered analytics">predictive modeling</span></p>
 
       <div class="card interest rv">
         <div class="interest-num">01</div>
         <div>
           <h3>Machine Learning &amp; Predictive Modeling</h3>
-          <p>Building models that forecast, classify and recommend, with careful feature engineering, hyperparameter tuning and honest evaluation on held-out data.</p>
-          <div class="tags"><a class="tag" href="#proj-btc">Bitcoin LSTM <small>Forecasting</small></a><a class="tag" href="#proj-aqi">Air Quality <small>Classification</small></a><a class="tag" href="#proj-recsys">Recommender <small>SVD</small></a><a class="tag" href="#proj-diffusion">Image Stylization <small>GenAI</small></a></div>
+          <p>Building models for time-series forecasting, classification and recommendation, with careful feature engineering, hyperparameter tuning and honest evaluation on held-out data.</p>
+          <div class="tags"><a class="tag" href="#proj-btc">Bitcoin LSTM <small>Time series</small></a><a class="tag" href="#proj-aqi">Air Quality <small>Classification</small></a><a class="tag" href="#proj-recsys">Recommender <small>SVD</small></a><a class="tag" href="#proj-diffusion">Image Stylization <small>GenAI</small></a></div>
         </div>
       </div>
 
@@ -174,9 +174,10 @@
     <section id="news">
       <h2 class="rv">News</h2>
       <ul class="news-list rv">
+        <li><span class="news-date">Nov 2026</span> <a href="#proj-alphacell">AlphaCell</a> update: built 8 paper-level research episodes, completed baseline evaluations and shipped the first improved research skill for autonomous research agents.</li>
         <li><span class="news-date">Aug 2026</span> Wrapped up my summer internship as an <strong>IT Audit Intern</strong> at Pan-China Certified Public Accountants in Hangzhou.</li>
         <li><span class="news-date">Feb 2026</span> Started the <a href="#proj-diffusion">Diffusion-Based Image Stylization System</a> project at Lehigh.</li>
-        <li><span class="news-date">Jun 2025</span> Started my M.S. in Data Science at <strong>Lehigh University</strong>! 🎉</li>
+        <li class="extra"><span class="news-date">Jun 2025</span> Started my M.S. in Data Science at <strong>Lehigh University</strong>! 🎉</li>
         <li class="extra"><span class="news-date">Jun 2025</span> Graduated from Lanzhou Jiaotong University with a B.Eng. in Data Science and Big Data Technology.</li>
         <li class="extra"><span class="news-date">Jan 2024</span> Joined <strong>QY (Qianyuan) Capital</strong> in Shenzhen as a Quantitative Research Intern.</li>
         <li class="extra"><span class="news-date">Jul 2023</span> Joined <strong>Capgemini Consulting</strong> in Shanghai as a Consulting Assistant Intern (Data).</li>
@@ -206,12 +207,12 @@
           <h3>AlphaCell: Skill-Level Recursive Self-Improvement for Autonomous Research Agents</h3>
           <div class="project-meta">Team research project · Autonomous AI research · Biomedical paper replication</div>
           <ul>
-            <li><strong>Research question:</strong> Investigating whether an LLM research agent can improve its scientific performance from past research episodes and independent feedback <em>without updating model weights</em>. The base model is held fixed while an external, versioned research skill is updated; the skill has four parts: reusable tools, method and evidence rules, planning strategies, and an updater that revises the next skill version.</li>
+            <li><strong>Research question:</strong> Investigating whether an LLM research agent can keep improving its scientific performance from past research episodes and independent feedback <em>without updating model weights</em>. The base model is held fixed while an external, versioned research skill evolves; the skill has four parts: reusable tools, method and evidence rules, planning strategies, and an updater that revises the next skill version.</li>
             <li><strong>Solver / Judge / Skill Development architecture:</strong> A Solver agent receives a scientific question and permitted public data, chooses its own analyses and submits candidate findings; an independent Judge holds private reference findings and scores matches on scientific meaning (subject, variables, direction of effect, conditions) rather than text similarity; a Skill Development stage proposes the next skill from execution traces and scores, which is validated and frozen before a fresh Solver session tests it.</li>
             <li><strong>Paper-to-Benchmark pipeline:</strong> Converted published biomedical papers with public data into standardized Research Episodes, extracting questions, variables, treatment and control groups, units of analysis and independently testable conclusions. An OPEN Target filter admits only findings whose data, variables and comparisons can be reproduced, and public task materials are kept separate from private scoring materials to prevent answer leakage and evaluation contamination.</li>
-            <li><strong>Benchmark &amp; baseline:</strong> Built <strong>8 candidate episodes</strong> covering zebrafish liver and heart regeneration, hippocampal neurons, malaria infection, cancer, spatial liver analysis and influenza-associated lung aging, with 2 to 68 reference targets each. Defined Discovery Recall (matched targets / total targets) and recorded S0 baselines on all 8: non-zero recall on 3 episodes (<strong>58.82%</strong>, 10/17; 25.00%, 4/16; 5.88%, 4/68) and zero on the other 5. Versions are compared within an episode, not ranked across papers.</li>
-            <li><strong>Skill iteration &amp; controlled experiment:</strong> Developed and froze the first improved skill, S1, adding reusable tools, method rules, a question-driven planning strategy and a fixed update procedure; it passed all 8 synthetic validation tests. In an S0 vs S1 comparison on the influenza lung-aging episode, S1 analyzed young vs aged immune-cell differences across flow-cytometry, bulk, single-cell and spatial RNA-seq data using unpaired exact permutation tests with Benjamini–Hochberg correction. Submitted findings rose from 3 to 4, but Discovery Recall stayed at <strong>5.88% (4/68), a change of 0.00 points</strong>.</li>
-            <li><strong>Diagnosis &amp; rigor:</strong> Showed that changing an agent's workflow does not by itself raise the rate at which it recovers reference findings, and traced a likely cause to narrow coverage (all four S1 findings came from flow cytometry). Documented reproducibility limits (a retrospective development-set comparison, the original S0 skill not preserved, inputs not yet byte-verified, targets pending final audit) and limited the conclusion to what the data supports. Next: per-target error analysis, component ablations, repeated independent runs and cross-paper transfer tests.</li>
+            <li><strong>Benchmark &amp; baseline:</strong> Built <strong>8 paper-level research episodes</strong> covering zebrafish liver and heart regeneration, hippocampal neurons, malaria infection, cancer, spatial liver analysis and influenza-associated lung aging, with up to 68 reference targets per episode. Defined Discovery Recall (matched targets / total targets) as the core metric and completed baseline evaluations on all 8 episodes, with the baseline agent recovering up to <strong>58.82%</strong> (10/17) of a paper's published findings.</li>
+            <li><strong>Skill iteration &amp; end-to-end evaluation:</strong> Developed, validated and froze the first improved research skill (S1), adding reusable analysis tools, method and quality-check rules, a question-driven planning strategy and a standardized update procedure; it passed <strong>8/8</strong> validation tests. Ran the first full Solver–Judge controlled evaluation on the influenza lung-aging episode, where the agent analyzed age-related immune-cell differences across flow-cytometry, bulk, single-cell and spatial RNA-seq data using unpaired exact permutation tests with Benjamini–Hochberg correction and submitted statistically tested findings for independent scoring.</li>
+            <li><strong>Evaluation rigor &amp; roadmap:</strong> Established a version-controlled, leakage-resistant protocol (skill freezing, integrity checks, within-episode comparisons) that separates workflow changes from genuine gains in research capability. Now extending it with per-target error analysis, component ablations, repeated independent runs and cross-paper transfer tests.</li>
           </ul>
           <div class="tags stack"><span class="tag">LLM Agents</span><span class="tag">Recursive Self-Improvement</span><span class="tag">Benchmark Design</span><span class="tag">LLM-as-Judge Evaluation</span><span class="tag">Experimental Design</span><span class="tag">Permutation Testing</span><span class="tag">Multiple-Testing Correction</span><span class="tag">scRNA-seq</span><span class="tag">Spatial Transcriptomics</span><span class="tag">Flow Cytometry</span></div>
         </div>
@@ -438,7 +439,7 @@
         </div>
         <div class="card skill rv">
           <h3><i class="fa-solid fa-brain"></i>Machine Learning</h3>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow/Keras</span><span class="tag">Keras Tuner</span><span class="tag">HF Diffusers</span><span class="tag">scikit-surprise</span><span class="tag">Statistical Testing</span></div>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow/Keras</span><span class="tag">Keras Tuner</span><span class="tag">HF Diffusers</span><span class="tag">scikit-surprise</span><span class="tag">Time-Series Forecasting</span><span class="tag">Statistical Testing</span><span class="tag">LLM Agents</span></div>
         </div>
         <div class="card skill rv">
           <h3><i class="fa-solid fa-database"></i>Data &amp; Big Data</h3>
